@@ -29,6 +29,21 @@ class Stack{
         this.lentgh++;
         return this;
     }
+    poo(){
+        if(this.length===0){
+            return console.log('Empty Stack')
+        }
+        const holdingPointer=this.top
+        if(this.length===1){
+            this.top=null
+            this.bottom=null
+        }else{
+        this.top=this.top.next
+        }
+        this.length--;
+        
+        return  holdingPointer;
+    }
 }
 
 const myStack= new Stack()
