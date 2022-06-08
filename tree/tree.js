@@ -34,6 +34,20 @@ class BinaryTree{
             }
         }
     }
+    search(value,tree=this.root){
+        if(!this.root)return console.error("The bunary Tree is empty")
+        if(!tree)return console.log("the Node is not in the tree")
+
+        if(value<tree.value){
+            return this.search(value,tree.left)
+        }else if(value>tree.value){
+            return this.search(value,tree.right)
+        }else{
+            console.log("The value has been finded in the tree")
+            return tree
+        }
+
+    }
 }
 
 const myTree= new BinaryTree()
